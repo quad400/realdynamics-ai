@@ -15,7 +15,9 @@ export default function Home() {
         </p>
       </div>
       <Assistant />
-      <></>
+      <div 
+        className="mb-[40px]"
+      />
     </main>
   );
 }
