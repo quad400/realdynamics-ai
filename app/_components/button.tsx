@@ -15,15 +15,9 @@ const AssistantButton = ({
 
   // Adjust the styles based on call status and audio level for a dynamic effect
   const buttonStyle = {
-    borderRadius: "50%",
-    width: "60px",
-    height: "60px",
-    color: "white",
-    border: "none",
-    cursor: "pointer",
     backgroundColor: color,
     boxShadow: `0 0 ${20 + audioLevel * 50}px ${audioLevel * 12}px ${color}`,
-    transition: "background-color 0.3s ease, box-shadow 0.3s ease",
+
     animation: isListening
       ? `pulse 1.5s infinite ease-in-out`
       : isLoading
@@ -34,21 +28,21 @@ const AssistantButton = ({
   return (
     <button
       style={buttonStyle}
-      className={`transition ease-in-out transform-gpu ${
+      className={`transition background-color 0.3s ease, box-shadow 0.3s ease h-[100px] md:h-[150px] rounded-full w-[100px] cursor-pointer text-white md:w-[150px] ease-in-out transform-gpu ${
         isListening
           ? "bg-red-600 hover:bg-red-700 animate-pulse"
           : isLoading
           ? "bg-orange-600 hover:bg-orange-700 animate-spin"
-          : "bg-green-600 hover:bg-green-700"
+          : "bg-blue-950 hover:bg-blue-900"
       } flex items-center justify-center shadow-lg`}
       onClick={toggleCall}
     >
       {isListening ? (
-        <Square />
+        <Square className="h-7 w-7 md:h-10 md:w-10" />
       ) : isLoading ? (
-        <Loader2 className="animate-spin" />
+        <Loader2 className="animate-spin h-7 w-7 md:h-10 md:w-10" />
       ) : (
-        <Mic />
+        <Mic className="h-7 w-7 md:h-10 md:w-10" />
       )}
     </button>
   );

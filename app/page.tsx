@@ -15,6 +15,7 @@ export default function Home() {
         </p>
       </div>
       <Assistant />
+      <></>
     </main>
   );
 }

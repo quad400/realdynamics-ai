@@ -2,16 +2,12 @@
 
 import { useVapi } from "@/hooks/useVapi";
 import { AssistantButton } from "./button";
-// import { Display } from "./display";
 
 function Assistant() {
-  const { toggleCall, callStatus, audioLevel,messages } = useVapi();
+  const { toggleCall, callStatus, audioLevel } = useVapi();
   return (
     <>
-      <div className="chat-history">
-        {/* <Chat messages={messages} /> */}
-      </div>
-      <div className="user-input">
+      <div>
         <AssistantButton
           audioLevel={audioLevel}
           callStatus={callStatus}
