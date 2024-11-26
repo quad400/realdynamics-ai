@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Montserrat, Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/nav-bar";
 import { Toaster } from "sonner";
 
-export const poppins = Poppins({
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-poppins",
+
+const montserrat = Montserrat({
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-montserrat",
 });
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} antialiased`}>
+      <body className={`${montserrat.className} antialiased`}>
         <Navbar />
         <Toaster />
         <main className="w-full pt-10 min-h-screen">{children}</main>
