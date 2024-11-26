@@ -1,7 +1,7 @@
 import { CALL_STATUS, useVapi } from "@/hooks/useVapi";
 import { Loader2, Mic, Square } from "lucide-react";
 
-const AssistantButton = ({
+const AssistantButtonSmall = ({
   toggleCall,
   callStatus,
   audioLevel = 0,
@@ -26,7 +26,7 @@ const AssistantButton = ({
   return (
     <button
       style={buttonStyle}
-      className={`transition background-color 0.3s ease, box-shadow 0.3s ease h-[100px] md:h-[150px] rounded-full w-[100px] cursor-pointer text-white md:w-[150px] ease-in-out transform-gpu ${
+      className={`transition background-color 0.3s ease, box-shadow 0.3s ease h-[50px] md:h-[60px] rounded-full w-[50px] cursor-pointer text-white md:w-[60px] ease-in-out transform-gpu ${
         isListening
           ? "bg-red-600 hover:bg-red-700 animate-pulse"
           : isLoading
@@ -36,14 +36,14 @@ const AssistantButton = ({
       onClick={toggleCall}
     >
       {isListening ? (
-        <Square className="h-7 w-7 md:h-10 md:w-10" />
+        <Square className="h-5 w-5 md:h-6 md:w-6" />
       ) : isLoading ? (
-        <Loader2 className="animate-spin h-7 w-7 md:h-10 md:w-10" />
+        <Loader2 className="animate-spin h-5 w-5 md:h-6 md:w-6" />
       ) : (
-        <Mic className="h-7 w-7 md:h-10 md:w-10" />
+        <Mic className="h-5 w-5 md:h-6 md:w-6" />
       )}
     </button>
   );
 };
 
-export { AssistantButton };
+export default AssistantButtonSmall
