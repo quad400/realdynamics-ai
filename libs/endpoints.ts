@@ -2,7 +2,7 @@ export const outbound = async () => {
     try {
         const users = await getUsers();
 
-        
+
 
     } catch (error) {
         
