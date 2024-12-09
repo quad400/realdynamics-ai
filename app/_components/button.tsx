@@ -26,7 +26,7 @@ const AssistantButton = ({
   return (
     <button
       style={buttonStyle}
-      className={`transition background-color 0.3s ease, box-shadow 0.3s ease h-[100px] md:h-[150px] rounded-full w-[100px] cursor-pointer text-white md:w-[150px] ease-in-out transform-gpu ${
+      className={`transition background-color 0.3s ease, box-shadow 0.3s ease  rounded-full w-[30px] cursor-pointer text-white h-[30px] ease-in-out transform-gpu ${
         isListening
           ? "bg-red-600 hover:bg-red-700 animate-pulse"
           : isLoading
@@ -36,11 +36,11 @@ const AssistantButton = ({
       onClick={toggleCall}
     >
       {isListening ? (
-        <Square className="h-7 w-7 md:h-10 md:w-10" />
+        <Square className="h-5 w-5 md:h-5 md:w-5" />
       ) : isLoading ? (
-        <Loader2 className="animate-spin h-7 w-7 md:h-10 md:w-10" />
+        <Loader2 className="animate-spin h-5 w-5 md:h-5 md:w-5" />
       ) : (
-        <Mic className="h-7 w-7 md:h-10 md:w-10" />
+        <Mic className="h-5 w-5 md:h-5 md:w-5" />
       )}
     </button>
   );

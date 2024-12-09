@@ -3,8 +3,8 @@
 import { useVapi } from "@/hooks/useVapi";
 import { AssistantButton } from "./button";
 
-function Assistant() {
-  const { toggleCall, callStatus, audioLevel } = useVapi();
+function Assistant({assistantId}: {assistantId: string}) {
+  const { toggleCall, callStatus, audioLevel } = useVapi(assistantId);
   return (
     <>
       <div>
