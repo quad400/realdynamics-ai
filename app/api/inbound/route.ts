@@ -10,7 +10,7 @@ export const POST = async (req: Request) => {
     const values = {
       assistantId: body.assistantId,
       provider: "vapi",
-      sipUri: "sip:coderblack@sip.vapi.ai"
+      sipUri: `sip:${body.assistantId}@sip.vapi.ai`
     };
 
     const { data } = await axios.post(
