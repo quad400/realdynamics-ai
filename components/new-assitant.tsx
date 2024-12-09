@@ -103,7 +103,7 @@ const NewAssistant = () => {
             render={({ field }) => (
               <FormItem>
                 <FormLabel className="uppercase text-xs sm:text-sm font-bold text-muted-foreground">
-                  First Message
+                  System Prompt
                 </FormLabel>
                 <FormControl>
                   <Textarea
